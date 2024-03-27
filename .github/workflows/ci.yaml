@@ -59,3 +59,4 @@ jobs:
       - name: upload artifact
         run: |
           poetry add twine
+          twine upload --skip-existing --repository-url ${{ secrets.PYPI_REPOSITORY }} --username ${{ secrets.PYPI_USERNAME }} --password ${{ secrets.PYPI_PASSWORD }} dist/*.tar.gz
