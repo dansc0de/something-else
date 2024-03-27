@@ -59,4 +59,4 @@ jobs:
       - name: upload artifact
         run: |
           pip install twine
-          twine upload --skip-existing --repository-url ${{ secrets.PYPI_REPOSITORY }} --username ${{ secrets.PYPI_USERNAME }} --password ${{ secrets.PYPI_PASSWORD }} dist/*.tar.gz
+          twine upload --skip-existing --repository-url ${{ secrets.PYPI_REPOSITORY_URL }} --username ${{ secrets.PYPI_USERNAME }} --password ${{ secrets.PYPI_PASSWORD }} dist/*.tar.gz
